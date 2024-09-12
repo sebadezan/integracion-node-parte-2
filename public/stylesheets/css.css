@@ -1,0 +1,90 @@
+/*
+font-family: "Open Sans", sans-serif;
+*/
+
+/* 
+font-family: "Alfa Slab One", serif;
+*/
+
+footer {
+    color: grey;
+}
+
+h1,
+h2 {
+    font-family: "Alfa Slab One", serif;
+}
+
+.hero {
+    background: url(../img/canva.png) no-repeat;
+    background-size: cover;
+    height: 80vh;
+    min-height: 600px;
+    color: white;
+}
+
+.lista-novedades {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lista-novedades li {
+    margin: 4px 0;
+}
+
+.lista-novedades li a {
+    background-color: white;
+    font-family: "Alfa Slab One", cursive;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all 0.5s ease-in-out;
+    display: block;
+}
+
+
+.lista-novedades li a:hover {
+    color: #212121;
+    background-color: #dadada;
+}
+
+.lista-novedades li a img {
+    width: 120px;
+    height: 50px;
+    filter: grayscale();
+    transition: all 0.5s ease-in-out;
+}
+
+.lista-novedades li a:hover img {
+    filter: none;
+
+}
+
+.testimonios {
+    background-color: #dadada;
+    padding-bottom: 4rem !important;
+}
+
+.testimonio {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.staff {
+    background: #efefef;
+}
+
+
+
+.conocenos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+html{
+    scroll-behavior: smooth;
+}
