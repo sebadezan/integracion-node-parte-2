@@ -24,11 +24,11 @@ router.post('/', async (req, res, next) => {
 
     // Creación del transportador (transporter)
     let transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST, 
-      port: process.env.SMTP_PORT,  
+      host: process.env.SMPT_HOST, 
+      port: process.env.SMPT_PORT,  
       auth: {
-        user: process.env.SMTP_USER,  
-        pass: process.env.SMTP_PASS
+        user: process.env.SMPT_USER,  
+        pass: process.env.SMPT_PASS
       }
     });
 
