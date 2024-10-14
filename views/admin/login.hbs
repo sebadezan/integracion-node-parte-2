@@ -1,27 +1,24 @@
-<div class="container" style="margin:100px auto;">
-    <div class="row">
-        <div class="col">
-            <form action="/admin/login" method="post">
-                <div class="form-group">
-                    <label for="usuario" class="col-sm-2 col-form-label">Usuario</label>
-                    <input type="text" class="form-control-plaintext" id="usuario" name="usuario">
-                </div>
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
 
-
-
-                <div class="form-group">
-                    <label for="contraseña" class="col-form-label">Contraseña</label>
-                    <input type="password" id="contraseña" class="form-control" aria-describedby="passwordHelpInline"
-                        name="contraseña">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-
-            {{#if error}}
-            <p>Usuario o contraseña incorrectos!</p>
-            {{/if}}
-        </div>
+    {{#if error}}
+    <div class="alert alert-danger" role="alert">
+        Usuario o contraseña incorrectos.
     </div>
-</div>
+    {{/if}}
+
+    <form action="/admin/login" method="POST">
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresa tu usuario"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label for="contraseña" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contraseña" name="contraseña"
+                placeholder="Ingresa tu contraseña" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+    </form>

@@ -15,19 +15,19 @@ router.post('/', async (req, res, next) => {
     var telefono = req.body.telefono;
     var email = req.body.email;
 
-  var obj = {
-    to: 'sebastiangust7@gmail.com', // A dónde llega la info
-    subject: 'Datos de la página web', // Asunto del correo
-    html: `${nombre} ${apellido} se contactó y quiere unirse al gimnasio a través de este correo: ${email}. Este es su teléfono: ${telefono}` 
-    // Cuerpo del correo
-  };
+    var obj = {
+      to: 'sebastiangust7@gmail.com', // A dónde llega la info
+      subject: 'Datos de la página web', // Asunto del correo
+      html: `${nombre} ${apellido} se contactó y quiere unirse al gimnasio a través de este correo: ${email}. Este es su teléfono: ${telefono}`
+      // Cuerpo del correo
+    };
 
     // Creación del transportador (transporter)
     let transporter = nodemailer.createTransport({
-      host: process.env.SMPT_HOST, 
-      port: process.env.SMPT_PORT,  
+      host: process.env.SMPT_HOST,
+      port: process.env.SMPT_PORT,
       auth: {
-        user: process.env.SMPT_USER,  
+        user: process.env.SMPT_USER,
         pass: process.env.SMPT_PASS
       }
     });
